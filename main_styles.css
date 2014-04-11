@@ -1,0 +1,198 @@
+/**
+ * Created by Jon on 2014-04-11.
+ */
+
+/**** General Styles ****/
+p, a, h1, h2, h3, h4, label, li {
+    font-family: HelveticaNeue-Light,
+                'Helvetica Neue Light',
+                'Helvetica Neue',
+                 Helvetica, Arial, sans-serif;
+}
+
+a, p, label, li {
+    color: #444;
+}
+
+p {
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+label {
+    font-size: 14px;
+}
+h1 {
+    font-size: 1.6em;
+}
+
+li, h4 {
+    font-size: 11px;
+    line-height: 1.8em;
+}
+
+li {
+
+    list-style-type: circle;
+}
+
+
+body {
+    background-image: -webkit-linear-gradient(top, rgb(222, 239, 233), rgb(242, 249, 246));
+}
+
+.centering-wrapper {
+    width: 39em;
+    margin: 1em auto;
+
+}
+
+.content {
+    clear: both;
+    background-color: white;
+    padding: 2em 2.5em;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.1);
+}
+
+/**** Header ****/
+
+header {
+    background-color: aquamarine;
+
+}
+
+    #logo {
+        float: left;
+        width: 194px;
+        height: 72px;
+        background: no-repeat url(assets/mint-dot-com-logo.png);
+    }
+
+    #signup-signin-toggle {
+        float: right;
+        margin-top: 3em;
+    }
+
+    #signup-signin-toggle a {
+        text-decoration: none;
+    }
+        #signup-signin-toggle a.active {
+            font-weight: bold;
+        }
+
+    #signup-signin-toggle li {
+        float: left;
+        padding: 0 0.5em;
+        list-style-type: none;
+
+    }
+
+        #signup-signin-toggle li:first-child {
+            border-right: 1px solid #ccc;
+        }
+
+/**** Content Heading ***/
+
+.content h1 {
+    font-weight: bold;
+    clear: both;
+    margin-bottom: 1em;
+}
+/**** Signup Section ****/
+
+#signup {
+    width: 18em;
+    float: left;
+}
+
+
+    #signup label, #signup input {
+        display: block;
+    }
+
+    #signup label {
+        margin-top: 2em;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+    }
+
+        #signup label:first-child {
+            margin-top: 0;
+        }
+        #signup label#terms-of-use-label {
+            display: inline;
+            font-weight: normal;
+            font-size: 12px;
+        }
+
+    #signup input, #signup select {
+        border: 1px solid #bbb;
+        height: 2em;
+        width: 20em;
+        border-radius: 5px;
+    }
+
+        #signup input#terms-of-use {
+            float: left;
+            height: auto;
+            width: auto;
+        }
+
+    #signup #tou {
+        margin-top: 2em;
+    }
+
+    #signup #submit {
+        width: 6em;
+        height: 2.5em;
+        font-size: 12px;
+        margin-top: 3em;
+        background-color: orange;
+        color: white;
+    }
+/**** Sidebar ****/
+
+aside {
+    float: right;
+    width: 12em;
+    border-left: 1px solid #ccc;
+    padding-left: 1em;
+}
+
+    aside li {
+        margin-left: 2em;
+        padding-right: 0;
+    }
+
+    aside ul:first-of-type {
+        margin-bottom: 14em;
+    }
+
+/**** footer ****/
+
+footer {
+    clear: both;
+    height: 3em;
+
+}
+
+    footer ul {
+        width: 30em;
+        margin: 2em auto;
+    }
+
+    footer li {
+        float: left;
+        list-style-type: none;
+        margin: 0 1em;
+    }
+
+/**** Helper Styles ****/
+
+.clear-float {
+    clear: both;
+}
