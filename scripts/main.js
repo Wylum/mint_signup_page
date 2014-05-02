@@ -10,18 +10,30 @@ var validateEmailConfirmation = function(inputVal) {
   return inputVal === document.getElementById('email').value;
 };
 
-var inputSwtichboard = function (input, inputVal) {
+var validatePassword = function(inputVal) {
+  "use strict";
+  
+};
+var inputSwtichboard = function (input) {
   'use strict';
-  switch (input.getAttribute("id")) {
+
+  switch (input.id) {
     case 'email':
       return validateEmail(input);
     case 'confirm-email':
-      return validateEmailConfirmation(inputVal);
+      return validateEmailConfirmation(input.value);
     case 'country':
-      return "country is valid?";
+      if (input.value === 'United States') {
+        console.log("change field to 'zip'");
+      } else if (input.value === 'Canada') {
+        console.log("change field to 'postal code'");
+      } else {
+        console.log("redirect to appropriate page");
+      }
     case 'postal-code':
       return "postal code valid?";
     case 'password':
+      console.log(input.checkValidity());
       return "password valid?";
     case 'password-confirm':
       return "password confirmation valid?";
@@ -42,7 +54,7 @@ var validateInput = function (input) {
 
 var init = function () {
   'use strict';
-  var signupInputs = document.querySelectorAll("#signup input");
+  var signupInputs = document.querySelectorAll("#signup input, #signup select");
   var signupLength = signupInputs.length;
 
   for (var i = 0; i < signupLength; i++) {
@@ -51,7 +63,6 @@ var init = function () {
     }, true);
 
     signupInputs[i].addEventListener('blur', function () {
-
       console.log(validateInput(this));
     }, true);
   }
