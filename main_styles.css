@@ -40,13 +40,16 @@ li {
     list-style-type: circle;
 }
 
-
+html {
+    min-height: 100%; /* Fix for short linear-gradient background */
+}
 body {
-    background-image: -webkit-linear-gradient(top, rgb(222, 239, 233), rgb(242, 249, 246));
+    background-image: linear-gradient(to bottom, rgb(222, 239, 233), rgb(242, 249, 246));
+
 }
 
 .centering-wrapper {
-    width: 39em;
+    width: 43em;
     margin: 1em auto;
 
 }
@@ -65,35 +68,34 @@ header {
 
 }
 
-    #logo {
-        float: left;
-        width: 194px;
-        height: 72px;
-        background: no-repeat url(assets/mint-dot-com-logo.png);
+#logo {
+    float: left;
+    width: 194px;
+    height: 72px;
+    background: no-repeat url(assets/mint-dot-com-logo.png);
+}
+
+.signup-signin-toggle {
+    float: right;
+    margin-top: 3em;
+}
+
+.signup-signin-toggle a {
+    text-decoration: none;
+}
+    .signup-signin-toggle a.active {
+        font-weight: bold;
     }
 
-    #signup-signin-toggle {
-        float: right;
-        margin-top: 3em;
+.signup-signin-toggle li {
+    float: left;
+    padding: 0 0.5em;
+    list-style-type: none;
+
+}
+    .signup-signin-toggle li:first-child {
+        border-right: 1px solid #ccc;
     }
-
-    #signup-signin-toggle a {
-        text-decoration: none;
-    }
-        #signup-signin-toggle a.active {
-            font-weight: bold;
-        }
-
-    #signup-signin-toggle li {
-        float: left;
-        padding: 0 0.5em;
-        list-style-type: none;
-
-    }
-
-        #signup-signin-toggle li:first-child {
-            border-right: 1px solid #ccc;
-        }
 
 /**** Content Heading ***/
 
@@ -104,49 +106,75 @@ header {
 }
 /**** Signup Section ****/
 
-#signup {
+.signup {
     width: 18em;
     float: left;
 }
 
-
-    #signup label, #signup input {
+    .signup form div {
+        margin-bottom: 20px;
+    }
+    .signup label, .signup input {
         display: block;
     }
 
-    #signup label {
+    .signup label {
         margin-top: 2em;
         margin-bottom: 0.5em;
         font-weight: bold;
     }
 
-        #signup label:first-child {
+        .signup label:first-child {
             margin-top: 0;
         }
-        #signup label#terms-of-use-label {
+        .signup label#terms-of-use-label {
             display: inline;
             font-weight: normal;
             font-size: 12px;
         }
 
-    #signup input, #signup select {
+    .signup input, .signup select {
         border: 1px solid #bbb;
         height: 2em;
         width: 20em;
         border-radius: 5px;
     }
 
-        #signup input#terms-of-use {
+        .signup input#terms-of-use {
             float: left;
             height: auto;
             width: auto;
         }
 
-    #signup #tou {
+        .signup .invalid-field {
+            background: url(assets/form-ajax-iam.png) no-repeat 270px 29px;
+        }
+        .signup .invalid-field input {
+            border-color: #c70307;
+        }
+
+        .signup .valid-field {
+            background: url(assets/form-ajax-iam.png) no-repeat 270px -70px;
+        }
+        .signup .valid-field input {
+            border-color: green;
+        }
+
+        .signup .error-message {
+            visibility: hidden;
+            color: #c70307;
+            font-size: 11px;
+            margin-top: 3px;
+        }
+
+        .signup .error-message.visible {
+            visibility: visible;
+        }
+    .signup .tou {
         margin-top: 2em;
     }
 
-    #signup #submit {
+    .signup #submit {
         width: 6em;
         height: 2.5em;
         font-size: 12px;

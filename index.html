@@ -1,89 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="reset.css"/>
-    <link rel="stylesheet" href="main_styles.css" />
-    <title>Mint | Start Here</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="reset.css"/>
+  <link rel="stylesheet" href="main_styles.css"/>
+  <title>Mint | Start Here</title>
 </head>
 <body>
-    <div class="centering-wrapper">
-        <header>
-            <a href="http://mint.com"><div id="logo"></div></a>
+<div class="centering-wrapper">
+  <header>
+    <a href="http://mint.com">
+      <div id="logo"></div>
+    </a>
 
-            <ul id="signup-signin-toggle">
-                <li><a class="active" href="#">Sign up</a></li>
-                <li><a href="#">Log in</a></li>
-            </ul>
-        </header>
+    <ul class="signup-signin-toggle">
+      <li><a class="active" href="#">Sign up</a></li>
+      <li><a href="#">Log in</a></li>
+    </ul>
+  </header>
 
-        <div class="content">
-            <h1>Create a new account</h1>
-            <section id="signup">
+  <div class="content">
+    <h1>Create a new account</h1>
+    <section class="signup">
 
-                <form action="#" method="GET">
-
-                    <label for="email">Your Email</label>
-                    <input id="email" type="email" autofocus/>
-
-                    <label for="confirm-email">Confirm Email</label>
-                    <input type="email" id="confirm-email"/>
-
-                    <label for="country">Country</label>
-                    <select name="country" id="country">
-                        <option value="United States">United States</option>
-                        <option value="Canada">Canada</option>
-                    </select>
-
-                    <label for="postal-code">Postal Code</label>
-                    <input type="text" minlength="6" maxlength="6" id="postal-code"/>
-
-                    <label for="password">Password</label>
-                    <input type="password" id="password"/>
-
-                    <label for="password-confirm">Confirm Password</label>
-                    <input type="password" id="password-confirm"/>
-
-                    <div id="tou">
-                        <input type="checkbox" id="terms-of-use" value="agreed-to-terms" />
-                        <label id="terms-of-use-label" for="terms-of-use">
-                            Yes, I agree to Mint's <a href="#">Terms of Use</a>.
-                        </label>
-                    </div>
-
-                    <input type="submit" id="submit" value="Sign up!" />
-                </form>
-            </section>
-
-            <aside>
-                <h2>Safe and secure</h2>
-                <ul>
-                    <li>Same security clearance as banks</li>
-                    <li>No one can move any money</li>
-                    <li>Suspicious activity alerts</li>
-                </ul>
-
-                <h4>Make your password more secure with these simple tips:</h4>
-                <ul>
-                    <li>8 or more characters</li>
-                    <li>At least 1 number</li>
-                    <li>At least 1 symbol</li>
-                    <li>An upper and lower case letter</li>
-                </ul>
-            </aside>
-
-            <div class="clear-float"></div>
+      <form action="#" method="GET">
+        <div class="email">
+          <label for="email">Your Email</label>
+          <input id="email" type="email" autofocus/>
+          <p class="error-message">Invalid email</p>
         </div>
-        <footer>
-            <ul>
-                <li><a href="#">Get Help</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">How we keep you safe</a></li>
-                <li><a href="#">Privacy and Security</a></li>
-                <li><a href="#">Terms of Use</a></li>
-            </ul>
-        </footer>
-    </div>
-    <script type="text/javascript" src="scripts/main.js"></script>
+
+        <div class="confirm-email">
+          <label for="confirm-email">Confirm Email</label>
+          <input type="email" id="confirm-email"/>
+          <p class="error-message">Invalid email</p>
+        </div>
+
+        <div class="country">
+          <label for="country">Country</label>
+          <select name="country" id="country">
+            <option value="United States">United States</option>
+            <option value="Canada">Canada</option>
+          </select>
+        </div>
+
+        <div class="postal-code">
+          <label for="postal-code">Postal Code</label>
+          <input type="text" minlength="6" maxlength="7" id="postal-code"/>
+          <p class="error-message">Invalid email</p>
+        </div>
+
+        <div class="password">
+          <label for="password">Password</label>
+          <input type="password" id="password"/>
+          <p class="error-message">Invalid email</p>
+        </div>
+
+        <div class="confirm-password">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password"/>
+          <p class="error-message">Invalid email</p>
+        </div>
+
+        <div class="tou">
+          <input type="checkbox" id="terms-of-use" value="agreed-to-terms"/>
+          <label id="terms-of-use-label" for="terms-of-use">
+            Yes, I agree to Mint's <a href="#">Terms of Use</a>.
+          </label>
+          <p class="error-message">Invalid email</p>
+        </div>
+
+        <input type="submit" id="submit" value="Sign up!"/>
+      </form>
+    </section>
+
+    <aside>
+      <h2>Safe and secure</h2>
+      <ul>
+        <li>Same security clearance as banks</li>
+        <li>No one can move any money</li>
+        <li>Suspicious activity alerts</li>
+      </ul>
+
+      <h4>Make your password more secure with these simple tips:</h4>
+      <ul>
+        <li>8 or more characters</li>
+        <li>At least 1 number</li>
+        <li>At least 1 symbol</li>
+        <li>An upper and lower case letter</li>
+      </ul>
+    </aside>
+
+    <div class="clear-float"></div>
+  </div>
+  <footer>
+    <ul>
+      <li><a href="#">Get Help</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">How we keep you safe</a></li>
+      <li><a href="#">Privacy and Security</a></li>
+      <li><a href="#">Terms of Use</a></li>
+    </ul>
+  </footer>
+</div>
+<script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>
